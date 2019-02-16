@@ -21,7 +21,7 @@ def encrypt(x,y):
     encrypt_nums = []
     key_count = 0
     for x in message_nums:
-        encrypt_nums.append(x + (key_count % 4))
+        encrypt_nums.append(x + key_nums[key_count % len(key_nums)])
         key_count += 1
     encrypt_chars = [associations[x%len(associations)] for x in encrypt_nums]
     encrypted = ''.join(encrypt_chars)
