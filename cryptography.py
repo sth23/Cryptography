@@ -13,9 +13,11 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 
 # Encrypt function, x = unecrypted string, y = key
 def encrypt(x,y):
+    encrypted = ""
     message_chars = list(x)
     key_chars = list(y)
-    return x
+    print(message_chars)
+    return encrypted
 
 # Decrypt function, x = encrypted string, y = key
 def decrypt(x,y):
