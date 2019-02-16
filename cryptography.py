@@ -23,7 +23,7 @@ def encrypt(x,y):
     for x in decrypt_nums:
         encrypt_nums.append(x + key_nums[key_count % len(key_nums)])
         key_count += 1
-    encrypt_chars = [associations[x%len(associations)] for x in encrypt_nums]
+    encrypt_chars = [associations[x % len(associations)] for x in encrypt_nums]
     encrypted = ''.join(encrypt_chars)
     return encrypted
 
@@ -34,8 +34,14 @@ def decrypt(x,y):
     key_chars = list(y)
     encrypt_nums = [association.index(x) for x in encrypt_chars]
     key_nums = [associations.index(x) for x in key_chars]
-    decrypt_nums
-    return x
+    decrypt_nums = []
+    key_count = 0
+    for x in encrypt_nums:
+        decrypt_nums.append(x - key_nums[key_count % len(key_nums)])
+        key_count += 1
+    decrypt_chars = [associations[x % len(associations)] for x in decrypt_nums]
+    decrypted = ''.join(decrypt_chars)
+    return decrypted
 
 # Takes user input to initiate program
 process = ""
