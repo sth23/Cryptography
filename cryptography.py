@@ -27,8 +27,8 @@ if process == "e":
 elif process == "d":
     message = input("Message: ")
     key = input("Key: ")
-    print(decrypt(message, key)
-#elif process == "q":
-  #  Goodbye!
+    print(decrypt(message, key))
+elif process == "q":
+    print("Goodbye!")
 else:
     print("Did not understand command, try again.")
