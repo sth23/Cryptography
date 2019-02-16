@@ -14,22 +14,27 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 # Encrypt function, x = unecrypted string, y = key
 def encrypt(x,y):
     encrypted = ""
-    message_chars = list(x)
+    decrypt_chars = list(x)
     key_chars = list(y)
-    message_nums = [associations.index(x) for x in message_chars]
+    decrypt_nums = [associations.index(x) for x in decrypt_chars]
     key_nums = [associations.index(x) for x in key_chars]
     encrypt_nums = []
     key_count = 0
-    for x in message_nums:
+    for x in decrypt_nums:
         encrypt_nums.append(x + key_nums[key_count % len(key_nums)])
         key_count += 1
     encrypt_chars = [associations[x%len(associations)] for x in encrypt_nums]
     encrypted = ''.join(encrypt_chars)
-    print(encrypted)
     return encrypted
 
 # Decrypt function, x = encrypted string, y = key
 def decrypt(x,y):
+    decrypted = ""
+    encrypt_chars = list(x)
+    key_chars = list(y)
+    encrypt_nums = [association.index(x) for x in encrypt_chars]
+    key_nums = [associations.index(x) for x in key_chars]
+    decrypt_nums
     return x
 
 # Takes user input to initiate program
