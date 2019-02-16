@@ -32,7 +32,7 @@ def decrypt(x,y):
     decrypted = ""
     encrypt_chars = list(x)
     key_chars = list(y)
-    encrypt_nums = [association.index(x) for x in encrypt_chars]
+    encrypt_nums = [associations.index(x) for x in encrypt_chars]
     key_nums = [associations.index(x) for x in key_chars]
     decrypt_nums = []
     key_count = 0
