@@ -16,7 +16,9 @@ def encrypt(x,y):
     encrypted = ""
     message_chars = list(x)
     key_chars = list(y)
+    message_nums = [associations.index(x) for x in message_chars]
     print(message_chars)
+    print(message_nums)
     return encrypted
 
 # Decrypt function, x = encrypted string, y = key
